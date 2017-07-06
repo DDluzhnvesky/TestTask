@@ -1,0 +1,54 @@
+ <!DOCTYPE html>
+ <html>
+    <head>
+        <title>Test Task</title>
+        <meta charset="utf-8">
+        <link rel="stylesheet" type="text/css" href="style.css">        
+        <script src="./dist/bundle.js"></script>
+    </head>
+    <body onload="entryPoint.init()">        
+        <div class="canvas-wrapper">
+            <canvas id="canvas" width="400" height="400"></canvas>
+        </div>
+        <div class="color-btn-group">            
+            <div id="red" onclick="entryPoint.color(this)"></div>
+            <div id="orange" onclick="entryPoint.color(this)"></div>
+            <div id="yellow" onclick="entryPoint.color(this)"></div>
+            <div id="green" onclick="entryPoint.color(this)"></div>
+            <div id="blue" onclick="entryPoint.color(this)"></div>
+            <div id="black" onclick="entryPoint.color(this)"></div>
+        </div>
+        <div class="undo-redo">
+            <button class="btn" value="undo" onclick="entryPoint.undo()">undo</button>
+            <button class="btn" value="redo" onclick="entryPoint.redo()">redo</button>    
+        </div>
+        <div class="width-btn-group">
+            <div>Line Width </div>
+            <div id="width-3" onclick="entryPoint.width(this)">3</div>
+            <div id="width-4" onclick="entryPoint.width(this)">4</div>
+            <div id="width-5" onclick="entryPoint.width(this)">5</div>
+            <div id="width-6" onclick="entryPoint.width(this)">6</div>
+            <div id="width-7" onclick="entryPoint.width(this)">7</div>
+            <div id="width-8" onclick="entryPoint.width(this)">8</div>
+        </div>
+        <div class="image-size">
+            <input id="imgWidth" type="text" placeholder="Write Width">
+            <input id="imgHeight" type="text" placeholder="Write Height">
+            <input type="button" value="Set Image Size" onclick="entryPoint.setImgSize()">
+            <input type="button" value="Reset" onclick="entryPoint.resetImgSize()">
+        </div>
+        <div class="nav-btn-group">            
+            <button class="btn" value="save" onclick="entryPoint.save()">Save image to LStorage</button>
+            <button class="btn" value="clean" onclick="entryPoint.clean()">Clean Canvas</button>
+        </div>
+        <hr>
+        <h3>Show image from LocalStorage</h3>
+        <input type="button" value="Available Keys" onclick="entryPoint.avKeys()">
+        <p id="a-keys"></p>
+        <div class="key-search">
+            <input id="inputKey" type="text" placeholder="Write key">
+            <input type="button" value="show" onclick="entryPoint.showStorObj()">
+        </div>        
+        <img id="show">
+    </body>
+</html>

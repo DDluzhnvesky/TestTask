@@ -1,0 +1,64 @@
+body {
+    font-family: "PT Sans", Arial;      
+    margin: 40px; 
+}
+
+#canvas {
+    border: 3px solid blue;
+}
+
+.color-btn-group {
+    background-color: lightgrey;
+    border: 1px solid darkgrey;
+    width: 205px;
+
+}
+.color-btn-group > div {
+    display: inline-block;    
+    margin: 5px;
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+}
+#red {
+    background-color: red;
+}
+#orange {
+    background-color: orange;
+}
+#yellow {
+    background-color: yellow;
+}
+#green {
+    background-color: green;
+}
+#blue {
+    background-color: blue;
+}
+#black {
+    background-color: black;
+}
+
+.width-btn-group {
+    margin: 5px;
+}
+.width-btn-group > div {
+    display: inline-block;    
+}
+.width-btn-group > div[id] {  
+    border: 1px solid darkgrey;
+    margin: 2px;
+    width: 20px;
+    height: 20px;
+    text-align: center;
+    cursor: pointer;
+}
+
+.image-size {
+    margin: 5px 0;
+}
+
+#show {
+    border: 3px solid gold;
+    margin-top: 5px;
+}
